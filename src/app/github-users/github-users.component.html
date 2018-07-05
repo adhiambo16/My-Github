@@ -1,0 +1,72 @@
+<div class="container page-top">
+  <ng-progress></ng-progress>
+  <div class="row search">
+    <div class="col-md-12 search-bar">
+      <app-search (getName)='searchUser($event)'></app-search>
+      <p>Enter username above to search for github profile e.g. devwaweru</p>
+      <hr>
+    </div>
+  </div>
+  <div class="row main-content">
+    <div class="col-md-4 image-left">
+      <img src="{{users.avatar_url}}" alt="Loading avatar">
+    </div>
+    <div class="col-md-8 user-details">
+      <div class="table table-striped">
+        <h3 > {{users.name}}</h3>
+        <table class="table info-bio">
+          <tbody>
+            <tr>
+              <th scope="row">Github Username:</th>
+              <td> <a href="{{users.html_url}}" target="_blank">{{users.login}}</a></td>
+            </tr>
+            <tr>
+              <th scope="row">Number of Repos:</th>
+              <td>{{users.public_repos}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Hireable:</th>
+              <td>{{users.hireable}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Profile Create Date:</th>
+              <td>{{users.created_at}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Followers:</th>
+              <td>{{users.followers}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Following</th>
+              <td>{{users.following}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <hr>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 user-repos">
+      <h3>Repositories by {{users.name|lastName}} </h3>
+      <div class="table table-striped">
+        <table class="table info-repos">
+          <tbody>
+            <tr *ngFor='let repository of gitUserRepos.newRepo'>
+              <td>
+                <a href="{{repository.html_url}}" target="_blank" appFontChanger>{{repository.name}}</a>
+                <br>
+                <p>Description: {{repository.description}}</p>
+                <br>
+                <p>Date Created: {{repository.created_at}}</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+

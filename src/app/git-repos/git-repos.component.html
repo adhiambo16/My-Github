@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row search">
+    <div class="col-md-12 search-bar">
+      <app-search (getName)='searchRepos($event)'></app-search>
+      <p>Enter repository name to perform a search e.g pig dice</p>
+      <p class="display">Displaying {{resultCount}} results</p>
+      <br>
+      <hr>
+    </div>
+  </div>
+  <div class="row main-content">
+    <div class="col-md-12 user-details">
+      <div class="table table-striped">
+        <table class="table">
+          <tbody>
+            <tr *ngFor='let repository of gitRepoRequest.searchRepo'>
+              <td>
+                <h4>
+                  <a href="{{repository.html_url}}" appFontChanger>{{repository.name}}</a>
+                </h4>
+                <p>Owner:
+                  <a href="{{repository.owner.html_url}}" target="_blank">{{repository.owner.login}}</a>
+                </p>
+                <p>Description: {{repository.description}}</p>
+                <p>Created on: {{repository.created_at}}</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <hr>
+      </div>
+    </div>
+    <div class="col-md-12 submit-button">
+      <button class="btn btn-outline-warning" (click)="loadMore()">Load More</button>
+    </div>
+  </div>
+</div>
+

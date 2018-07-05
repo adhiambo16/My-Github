@@ -1,0 +1,63 @@
+.container {
+    margin-top: 2rem;
+  }
+  
+  .col-md-12 {
+    text-align: center;
+  }
+  
+  img {
+    max-width: 80%;
+    border-radius: 610px;
+  }
+  
+  .image-left {
+    padding-top: 6rem;
+    text-align: center;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color: #ffc107;
+  }
+  
+  .content {
+    text-indent: 5%;
+  }
+  
+  .info-repos p {
+    text-indent: 2rem;
+  }
+  
+  .table-striped h3 {
+    font-family: 'Allura';
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  tr {
+    font-family: 'Quicksand';
+    font-size: 16px;
+  }
+  
+  .user-details {
+    padding-top: 1rem;
+  }
+  
+  .main-content {
+    padding-bottom: 5rem;
+  }
+  
+  .info-repos {
+    text-align: left;
+  }
+  
+  .user-repos h3 {
+    font-family: 'Julius Sans One'
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  

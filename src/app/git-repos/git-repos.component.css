@@ -1,0 +1,37 @@
+.container {
+    margin-top: 2rem;
+  }
+  
+  table {
+    font-family: 'Montserrat';
+  }
+  
+  p {
+    text-indent: 2rem;
+  }
+  
+  button {
+    height: 100px;
+    border-radius: 100px;
+  }
+  
+  .submit-button {
+    text-align: center;
+  }
+  
+  .search-bar p {
+    color: rgba(51, 51, 51, 0.61);
+    font-size: 13px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .display{
+    float: left;
+    margin-bottom: 0.3rem;
+  }
+  a:hover {
+    text-decoration: none;
+    color: #ffc107;
+  }

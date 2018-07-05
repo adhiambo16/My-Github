@@ -1,0 +1,18 @@
+.form-control{
+    padding: 0.7em;
+    border-radius: 0.5rem;
+    width: 333px;
+    margin-right: 1rem;
+}
+.form-group{
+    display: flex;
+    justify-content: center;
+}
+@media (max-width: 591px){
+    button{
+        display: none;
+    }    
+    .form-control{
+        width: 100%;
+    }
+}
